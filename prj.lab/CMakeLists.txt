@@ -1,6 +1,6 @@
 add_subdirectory(complex)
-#add_subdirectory(rational)
-#add_subdirectory(dynarr)
+add_subdirectory(rational)
+add_subdirectory(dynarr)
 #add_subdirectory(stackarr)
 #add_subdirectory(stacklst)
 #add_subdirectory(queuelst)
