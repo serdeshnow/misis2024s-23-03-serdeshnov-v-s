@@ -8,20 +8,22 @@
 
 class StackArr {
 public:
-  StackArr();
-	StackArr(const StackArr&) = default;
-  ~StackArr();
-  StackArr& operator=(const StackArr&);
+  StackArr(); // done
+	StackArr(const StackArr&); // done
+  ~StackArr(); // done
+  StackArr& operator=(const StackArr&); //
 
-  void Push(const Complex); // (4)
+  void Push(const Complex); // done (4)
 
-  void Pop() noexcept; // (3)
+  void Pop() noexcept; // done (3)
 
   bool IsEmpty() noexcept; // done (1)
 
-  const Complex& Top() const; // (2)
+  const Complex& Top() const; // done (2)
 
-	Complex& Top(); // (2.1)
+	Complex& Top(); // done (2.1)
+
+	void Clear() noexcept; // done
 
 
 private:
@@ -29,8 +31,7 @@ private:
 
 	int head_ = -1; // head_
 
-	Complex* data_ = nullptr; // arr_
-
+	Complex* data_ = nullptr; // arr_ начало массива
 };
 
 #endif // !STACKARR_LIB_HPP
