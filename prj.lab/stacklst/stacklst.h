@@ -10,26 +10,25 @@
 class StackLst {
 public:
   StackLst() = default; // default
-  StackLst(const StackLst&) = default; // (0)
-  ~StackLst() = default; // (0)
+  StackLst(const StackLst&) = default; // (6)
+  ~StackLst() = default; // (6.1)
 
-  void Push(); // (3)
+  void Push(const Complex); // (3)
 
-  void Pop(); // (4)
+  void Pop() noexcept; // (4)
 
   Complex& Top(); // (2.1)
 
-  const Complex& Top(); // (2.2)
+  const Complex& Top() const; // (2.2)
 
-  void Clear(); // (5)
+  void Clear() noexcept; // (5)
 
-  bool IsEmpty(); // (1)
+  bool IsEmpty() noexcept; // done (1)
 
 private:
 	struct Node {
-		Complex& value_; // int --> int&
-
-		Node* next = nullptr; // указатель на следующий элемент
+		Complex& value_;
+		Node* next_node = nullptr; // указатель на следующий элемент
 	};
   Node* FindLast(); // (2.0)
 	Node* head_ = nullptr;
