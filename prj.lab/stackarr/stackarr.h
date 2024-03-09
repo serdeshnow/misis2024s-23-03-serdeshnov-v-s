@@ -9,7 +9,7 @@
 class StackArr {
 public:
   StackArr(); // done
-	StackArr(const StackArr&); // done
+  StackArr(const StackArr&); // done
   ~StackArr(); // done
   StackArr& operator=(const StackArr&); //
 
@@ -21,9 +21,9 @@ public:
 
   const Complex& Top() const; // done (2)
 
-	Complex& Top(); // done (2.1)
+  Complex& Top(); // done (2.1)
 
-	void Clear() noexcept; // done
+  void Clear() noexcept; // done
 
 
 private:
@@ -31,7 +31,7 @@ private:
 
 	int head_ = -1; // head_
 
-	Complex* data_ = nullptr; // arr_ начало массива
+	Complex* data_ = nullptr; // arr_
 };
 
 #endif // !STACKARR_LIB_HPP
