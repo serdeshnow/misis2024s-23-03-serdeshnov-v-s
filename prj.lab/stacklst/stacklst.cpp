@@ -1,13 +1,5 @@
 #include "stacklst.h"
 
-StackLst::Node* StackLst::FindLast() noexcept {
-  Node* pointer = head_;
-  if (pointer == nullptr) {
-    return nullptr;
-  }
-  while ()
-}
-
 void StackLst::Push() {
 
 }

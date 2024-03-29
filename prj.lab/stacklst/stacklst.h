@@ -30,8 +30,7 @@ private:
 		Complex& value_;
 		Node* next_node = nullptr; // указатель на следующий элемент
 	};
-  Node* FindLast(); // (2.0)
 	Node* head_ = nullptr;
-}
+};
 
 #endif // !STACKLST_LIB_HPP
