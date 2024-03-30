@@ -9,28 +9,29 @@
 
 class StackLst {
 public:
-  StackLst() = default; // default
-  StackLst(const StackLst&) = default; // (6)
-  ~StackLst() = default; // (6.1)
+  StackLst() = default; //! default
+  StackLst(const StackLst&); // (6)
+  ~StackLst(); //! done (6.1)
+  StackLst& operator=(const StackLst&); // (7)
 
-  void Push(const Complex); // (3)
+  void Push(const Complex& val); //! done (3)
 
-  void Pop() noexcept; // (4)
+  void Pop() noexcept; //! done (4)
 
-  Complex& Top(); // (2.1)
+  [[nodiscard]] Complex& Top(); //! done (2.1)
 
-  const Complex& Top() const; // (2.2)
+  [[nodiscard]] const Complex& Top() const; //! done (2.2)
 
-  void Clear() noexcept; // (5)
+  void Clear() noexcept; //! done (5)
 
-  bool IsEmpty() noexcept; // done (1)
+  bool IsEmpty() noexcept; //! done (1)
 
 private:
 	struct Node {
-		Complex& value_;
+		Complex value_;
 		Node* next_node = nullptr; // указатель на следующий элемент
 	};
 	Node* head_ = nullptr;
 };
 
-#endif // !STACKLST_LIB_HPP
+#endif
