@@ -8,22 +8,22 @@
 
 class StackArr {
 public:
-  StackArr(); // done
-  StackArr(const StackArr&); // done
-  ~StackArr(); // done
+  StackArr(); //! done
+  StackArr(const StackArr&); //! done
+  ~StackArr(); //! done
   StackArr& operator=(const StackArr&); //
 
-  void Push(const Complex); // done (4)
+  void Push(const Complex); //! done (4)
 
-  void Pop() noexcept; // done (3)
+  void Pop() noexcept; //! done (3)
 
-  bool IsEmpty() noexcept; // done (1)
+  [[nodiscard]] bool IsEmpty() const noexcept; //! done (1)
 
-  const Complex& Top() const; // done (2)
+  [[nodiscard]] const Complex& Top() const; //! done (2)
 
-  Complex& Top(); // done (2.1)
+  Complex& Top(); //! done (2.1)
 
-  void Clear() noexcept; // done
+  void Clear() noexcept; //! done
 
 
 private:

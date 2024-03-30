@@ -1,7 +1,5 @@
 #include "stackarr.h"
 
-
-
 StackArr::StackArr() {
 	capacity_ = 1;
 	data_ = new Complex[capacity_];
@@ -11,7 +9,7 @@ StackArr::StackArr(const StackArr &old_stack) : head_(old_stack.head_), capacity
 	data_ = new Complex[capacity_];
 	for (int i = 0; i < head_ + 1; i += 1) {
 //		Push(old_stack.data_[i]);
-		data_[i] = old_stack.data_[i];
+      data_[i] = old_stack.data_[i];
 	}
 }
 
@@ -56,7 +54,7 @@ void StackArr::Pop() noexcept {
 	}
 }
 
-bool StackArr::IsEmpty() noexcept {
+bool StackArr::IsEmpty() const noexcept {
 	return head_ == -1;
 }
 
