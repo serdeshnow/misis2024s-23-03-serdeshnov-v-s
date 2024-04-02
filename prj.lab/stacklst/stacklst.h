@@ -28,7 +28,7 @@ public:
 
 private:
 	struct Node {
-		Complex value_;
+		Complex value;
 		Node* next_node = nullptr; // указатель на следующий элемент
 	};
 	Node* head_ = nullptr;

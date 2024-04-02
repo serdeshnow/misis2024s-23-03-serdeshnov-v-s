@@ -1,7 +1,12 @@
 #include "stacklst.h"
 
-StackLst::StackLst(const StackLst& old_stack) : head_(old_stack.head_) {
-
+StackLst::StackLst(const StackLst& rhs) : head_(rhs.head_) { // rhs == old_stack
+  Node* rhs_ptr = rhs.head_;
+  while (rhs_ptr != nullptr) {
+    Complex lhs_value = rhs_ptr->value;
+    Push(lhs_value);
+    rhs_ptr = rhs_ptr->next_node;
+  }
 }
 
 StackLst::~StackLst() {
@@ -17,7 +22,7 @@ void StackLst::Push(const Complex& val) {
   Node* new_node = new Node;
   head_ = new_node;
   (*head_).next_node = temp; // == head_ -> next_node = temp;
-  (*head_).value_ = val;
+  (*head_).value = val;
 }
 
 void StackLst::Pop() noexcept {
@@ -30,7 +35,7 @@ void StackLst::Pop() noexcept {
 
 Complex& StackLst::Top() {
   if (head_ != nullptr) {
-    return head_ -> value_;
+    return head_ -> value;
   } else {
     throw std::logic_error("No data in StackLst");
   }
@@ -38,7 +43,7 @@ Complex& StackLst::Top() {
 
 const Complex &StackLst::Top() const {
   if (head_ != nullptr) {
-    return head_ -> value_;
+    return head_ -> value;
   } else {
     throw std::logic_error("No data in StackLst");
   }
