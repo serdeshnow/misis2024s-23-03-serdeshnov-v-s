@@ -14,7 +14,7 @@ StackLst::~StackLst() {
 }
 
 StackLst& StackLst::operator=(const StackLst&) {
-
+	
 }
 
 void StackLst::Push(const Complex& val) {
