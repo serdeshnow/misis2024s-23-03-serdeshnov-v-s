@@ -9,7 +9,7 @@ class BitSet {
 public:
 		BitSet();
 		BitSet(const BitSet&);
-		BitSet(BitSet&&);
+		BitSet(BitSet&&) noexcept ;
 		BitSet& operator=(const BitSet&);
 		BitSet& operator=(BitSet&&);
 		~BitSet();
@@ -19,7 +19,7 @@ public:
 		BitSet& operator^(const BitSet& value); // XOR BIT
 		BitSet& operator~(); // BIT Negative (negation)
 
-		int32_t Size() const; // get size(?)
+		[[nodiscard]] int32_t Size() const; // get size(?)
 		void Resize(const int32_t size); // change size
 		void Set(const int32_t index, const bool value); // position and value
 		bool Get(const int32_t index);
