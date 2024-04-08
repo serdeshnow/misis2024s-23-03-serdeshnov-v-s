@@ -13,9 +13,9 @@ public:
 
 		bool IsEmpty() noexcept; //
 
-		void Pop() noexcept; // из head_
+		void Pop() noexcept; // from head_
 
-		void Push(const Complex& val); // в tail_
+		void Push(const Complex& val); //into tail_
 
 		void Clear();
 

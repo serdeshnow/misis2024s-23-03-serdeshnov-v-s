@@ -16,11 +16,11 @@ bool QueueLst::IsEmpty() noexcept {
 
 void QueueLst::Pop() noexcept {
 
-} // из head_
+} // from head_
 
 void QueueLst::Push(const Complex& val){
 
-} // в tail_
+} // into tail_
 
 void QueueLst::Clear() {
 
