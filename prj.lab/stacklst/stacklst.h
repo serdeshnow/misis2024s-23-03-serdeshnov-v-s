@@ -29,7 +29,7 @@ public:
 private:
 	struct Node {
 		Complex value;
-		Node* next_node = nullptr; // указатель на следующий элемент
+		Node* next_node = nullptr; // указатель на следующий элемент next
 	};
 	Node* head_ = nullptr;
 };

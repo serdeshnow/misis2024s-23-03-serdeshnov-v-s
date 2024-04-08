@@ -39,7 +39,7 @@ Complex& StackLst::Top() {
   } else {
     throw std::logic_error("No data in StackLst");
   }
-} // запись
+} // writing
 
 const Complex &StackLst::Top() const {
   if (head_ != nullptr) {
@@ -47,7 +47,7 @@ const Complex &StackLst::Top() const {
   } else {
     throw std::logic_error("No data in StackLst");
   }
-} // чтение
+} // reading
 
 
 void StackLst::Clear() noexcept {
