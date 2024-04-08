@@ -13,7 +13,7 @@ public:
   ~StackArr(); //! done
   StackArr& operator=(const StackArr&); //
 
-  void Push(const Complex); //! done (4)
+  void Push(const Complex&); //! done (4)
 
   void Pop() noexcept; //! done (3)
 

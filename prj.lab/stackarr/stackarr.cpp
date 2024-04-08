@@ -34,7 +34,7 @@ StackArr& StackArr::operator=(const StackArr& rhs){
 	}
 }
 
-void StackArr::Push(const Complex elem) {
+void StackArr::Push(const Complex& elem) {
 	if (head_ + 1 == capacity_) {
 		capacity_ *= 2;
 		Complex* new_ptr = new Complex[capacity_];
