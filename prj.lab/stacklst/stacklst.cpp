@@ -13,8 +13,25 @@ StackLst::~StackLst() {
   StackLst::Clear();
 }
 
-StackLst& StackLst::operator=(const StackLst&) {
-	
+StackLst& StackLst::operator=(const StackLst& rhs) noexcept{
+	if (this != &rhs) {
+		Clear();
+		if(!rhs.IsEmpty()) {
+			StackLst tStack;  // temporary StackList
+
+			Node* cur_rhs_node = rhs.head_;
+			while (cur_rhs_node != nullptr) {  // from rhs to temporary
+				tStack.Push(cur_rhs_node -> value);
+				cur_rhs_node = cur_rhs_node -> next_node;
+			}
+
+			while(!tStack.IsEmpty()) {  // from temporary to this (&lhs)
+				Push(tStack.Top()); // push top node from temporary to bottom position in this
+				tStack.Pop(); // delete top node from temporary to get next node
+			}
+		}
+	}
+	return *this;
 }
 
 void StackLst::Push(const Complex& val) {
@@ -56,8 +73,14 @@ void StackLst::Clear() noexcept {
   }
 }
 
+const bool StackLst::IsEmpty() const noexcept {
+	return head_ == nullptr;
+}
+
 bool StackLst::IsEmpty() noexcept {
   return head_ == nullptr;
 }
+
+
 
 

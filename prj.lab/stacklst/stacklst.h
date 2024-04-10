@@ -12,7 +12,7 @@ public:
   StackLst() = default; //! default
   StackLst(const StackLst&); // (6)
   ~StackLst(); //! done (6.1)
-  StackLst& operator=(const StackLst&); // (7)
+  StackLst& operator=(const StackLst& rhs) noexcept; // (7)
 
   void Push(const Complex& val); //! done (3)
 
@@ -23,6 +23,8 @@ public:
   [[nodiscard]] const Complex& Top() const; //! done (2.2)
 
   void Clear() noexcept; //! done (5)
+
+	[[nodiscard]] const	bool IsEmpty() const noexcept;
 
   bool IsEmpty() noexcept; //! done (1)
 
