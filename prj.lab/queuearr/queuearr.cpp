@@ -1,4 +1,4 @@
-#include "queuearr.h"
+#include "queuearr.hpp"
 
 QueueArr::QueueArr() {
 	capacity_ = 10;

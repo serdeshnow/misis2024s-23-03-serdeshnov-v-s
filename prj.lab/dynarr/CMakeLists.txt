@@ -1,1 +1,1 @@
-add_executable(dynarr dynarr.cpp dynarr.h)
+add_executable(dynarr dynarr.cpp dynarr.hpp)

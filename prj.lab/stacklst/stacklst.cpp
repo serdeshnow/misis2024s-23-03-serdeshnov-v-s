@@ -1,4 +1,4 @@
-#include "stacklst.h"
+#include "stacklst.hpp"
 
 StackLst::StackLst(const StackLst& rhs) : head_(rhs.head_) { // rhs == old_stack
   Node* rhs_ptr = rhs.head_;

@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-#include <stacklst/stacklst.hpp>
+#include "doctest.hpp"
+#include "stacklst/stacklst.hpp"
 
 TEST_CASE("StackList ctor") {
     StackLst stack;

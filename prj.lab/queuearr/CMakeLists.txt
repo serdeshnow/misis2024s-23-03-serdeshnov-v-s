@@ -1,1 +1,1 @@
-add_library(queuearr queuearr.cpp queuearr.h)
+add_library(queuearr queuearr.cpp queuearr.hpp)

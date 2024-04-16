@@ -1,4 +1,4 @@
-add_library(stackarrt stackarrt.h)
+add_library(stackarrt stackarrt.hpp)
 
 set_property(TARGET stackarrt PROPERTY CXX_STANDARD 20)
 

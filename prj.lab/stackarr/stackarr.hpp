@@ -1,7 +1,7 @@
 #ifndef STACKARR_LIB_HPP
 #define STACKARR_LIB_HPP
 
-#include <complex/complex.h>
+#include "complex/complex.hpp"
 
 #include <cstdint>
 #include <stdexcept>

@@ -1,7 +1,7 @@
 #ifndef STACKLST_LIB_HPP
 #define STACKLST_LIB_HPP
 
-#include "complex/complex.h"
+#include "complex/complex.hpp"
 
 #include <cstdint>
 #include <stdexcept>
@@ -10,9 +10,9 @@
 class StackLst {
 public:
   StackLst() = default; //! default
-  StackLst(const StackLst&); // (6)
+  StackLst(const StackLst&); // (8)
   ~StackLst(); //! done (6.1)
-  StackLst& operator=(const StackLst& rhs) noexcept; // (7)
+  StackLst& operator=(const StackLst& rhs) noexcept; //! done (7)
 
   void Push(const Complex& val); //! done (3)
 

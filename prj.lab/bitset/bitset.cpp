@@ -1,4 +1,4 @@
-#include "bitset/bitset.h"
+#include "bitset/bitset.hpp"
 
 BitSet::BitSet() {
 //	new std::vector<uint32_t> (size_); // who the fc is this

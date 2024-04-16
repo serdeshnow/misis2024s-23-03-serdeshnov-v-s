@@ -1,8 +1,8 @@
-#ifndef MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_H
-#define MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_H
+#ifndef MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_HPP
+#define MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_HPP
 
 #include <cstdint>
-#include "complex/complex.h"
+#include "complex/complex.hpp"
 
 class QueueLst {
 public:
@@ -33,4 +33,4 @@ private:
 };
 
 
-#endif //MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_H
+#endif //MISIS2024S_23_03_SERDESHNOV_V_S_QUEUELST_HPP

@@ -1,4 +1,4 @@
-#include <rational/rational.h>
+#include "rational.hpp"
 
 
 Rational& Rational::operator+=(const Rational& rhs) { /// определение оператора +=

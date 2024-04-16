@@ -1,4 +1,4 @@
-#include "stackarr.h"
+#include "stackarr.hpp"
 
 StackArr::StackArr() {
 	capacity_ = 1;
