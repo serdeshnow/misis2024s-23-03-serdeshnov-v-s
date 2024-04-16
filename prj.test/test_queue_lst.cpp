@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.hpp"
-#include <queuelst/queuelst.hpp>
+#include "queuelst/queuelst.hpp"
 
 TEST_CASE("StackList ctor") {
     QueueLst stack;
