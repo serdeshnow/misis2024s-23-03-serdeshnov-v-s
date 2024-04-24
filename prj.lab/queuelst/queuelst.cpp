@@ -11,7 +11,7 @@ QueueLst& QueueLst::operator=(const QueueLst& rhs) {
 }
 
 bool QueueLst::IsEmpty() noexcept {
-
+	return head_ == nullptr;
 } //
 
 void QueueLst::Pop() noexcept {
