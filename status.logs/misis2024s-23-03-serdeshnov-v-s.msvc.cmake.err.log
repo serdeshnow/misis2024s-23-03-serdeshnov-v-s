@@ -1,12 +1,4 @@
-CMake Error at prj.check/prj.check/doctest_dynarr/CMakeLists.txt:2 (target_link_libraries):
-  Target "dynarr" of type EXECUTABLE may not be linked into another target.
-  One may link only to INTERFACE, OBJECT, STATIC or SHARED libraries, or to
-  executables with the ENABLE_EXPORTS property set.
-
-
-CMake Error at prj.check/prj.check/doctest_dynarr/CMakeLists.txt:6 (target_link_libraries):
-  Target "dynarr" of type EXECUTABLE may not be linked into another target.
-  One may link only to INTERFACE, OBJECT, STATIC or SHARED libraries, or to
-  executables with the ENABLE_EXPORTS property set.
+CMake Error at CMakeLists.txt:5 (add_subdirectory):
+  add_subdirectory given source "prj.app" which is not an existing directory.
 
 
