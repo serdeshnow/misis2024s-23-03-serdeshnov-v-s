@@ -165,7 +165,7 @@ Release/D:/projects/misis2023f-23-check/misis2024s-23-03-serdeshnov-v-s/bin.chec
 
 5% tests passed, 19 tests failed out of 20
 
-Total Test time (real) =   0.11 sec
+Total Test time (real) =   0.10 sec
 
 The following tests FAILED:
 	  1 - doctest_bitset (Not Run)
