@@ -1,34 +1,52 @@
 #ifndef MISIS2024S_23_03_SERDESHNOV_V_S_BITSET_HPP
 #define MISIS2024S_23_03_SERDESHNOV_V_S_BITSET_HPP
 
-#include <cstdint>
-#include <stdexcept>
 #include <vector>
+#include <cstdint>
+#include <iostream>
 
 class BitSet {
 public:
-		BitSet();
-		BitSet(const BitSet&);
-		BitSet(BitSet&&) noexcept ;
-		BitSet& operator=(const BitSet&);
-		BitSet& operator=(BitSet&&);
-		~BitSet();
+	BitSet() = default;
+	explicit BitSet(const int32_t& size);
+	BitSet(const BitSet& rhs);
+	BitSet(BitSet&& rhs) noexcept;
+	BitSet& operator=(const BitSet& rhs);
+	BitSet& operator=(BitSet&& rhs) noexcept;
+	~BitSet();
 
-		BitSet& operator&(const BitSet& value); // AND BIT
-		BitSet& operator|(const BitSet& value); // OR BIT
-		BitSet& operator^(const BitSet& value); // XOR BIT
-		BitSet& operator~(); // BIT Negative (negation)
+	class BitAccessor {
+		int32_t idx_;
+		BitSet& bst_;
+		BitSet::BitAccessor& operator=(const bool &val);
+		explicit operator bool() const noexcept;
+	};
 
-		[[nodiscard]] int32_t Size() const; // get size(?)
-		void Resize(const int32_t size); // change size
-		void Set(const int32_t index, const bool value); // position and value
-		bool Get(const int32_t index);
-		void Fill(const bool value); // fill all bits to 0/1
+	BitAccessor& operator[](const int32_t idx);
+	bool operator[](const int32_t idx) const;
 
+	void Fill() noexcept;
+	bool Get(const int32_t& idx) const;
+	void Set(const int32_t& idx, const bool& v);
+
+	[[nodiscard]] int32_t Size() const noexcept;
+	void Resize(const int32_t& newSize);
+
+	bool operator==(const BitSet& rhs) const noexcept;
+	bool operator!=(const BitSet& rhs) const noexcept;
+
+	BitSet& operator~() noexcept;
+	BitSet& operator&=(const BitSet& rhs);
+	BitSet& operator|=(const BitSet& rhs);
+	BitSet& operator^=(const BitSet& rhs);
 private:
-		std::vector<uint32_t> vec_; // unsigned
-		int32_t size_; // signed // amount of vec_ elements (?) // each element contains 32 bits
+	std::vector<uint32_t> data_;
+	int32_t size_ = 0;
 };
+
+BitSet operator&(const BitSet& lhs, const BitSet& rhs);
+BitSet operator|(const BitSet& lhs, const BitSet& rhs);
+BitSet operator^(const BitSet& lhs, const BitSet& rhs);
 
 
 #endif //MISIS2024S_23_03_SERDESHNOV_V_S_BITSET_HPP
