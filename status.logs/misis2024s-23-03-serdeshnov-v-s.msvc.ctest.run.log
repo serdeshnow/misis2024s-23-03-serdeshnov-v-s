@@ -155,17 +155,17 @@ Release/D:/projects/misis2023f-23-check/misis2024s-23-03-serdeshnov-v-s/bin.chec
 15/20 Test #18: doctest_stackarr_m ...............***Not Run   0.00 sec
       Start 19: doctest_stacklst
       Start 20: doctest_stacklst_m
-16/20 Test  #3: doctest_complex ..................***Failed    0.05 sec
-17/20 Test  #4: doctest_complex_io ...............***Failed    0.04 sec
-18/20 Test  #5: doctest_complex_m ................   Passed    0.04 sec
+16/20 Test  #3: doctest_complex ..................***Failed    0.02 sec
+17/20 Test  #4: doctest_complex_io ...............***Failed    0.02 sec
+18/20 Test  #5: doctest_complex_m ................   Passed    0.02 sec
 19/20 Test #19: doctest_stacklst .................Exit code 0xc0000374
-***Exception:   0.06 sec
+***Exception:   0.05 sec
 20/20 Test #20: doctest_stacklst_m ...............Exit code 0xc0000374
-***Exception:   0.06 sec
+***Exception:   0.05 sec
 
 5% tests passed, 19 tests failed out of 20
 
-Total Test time (real) =   0.10 sec
+Total Test time (real) =   0.07 sec
 
 The following tests FAILED:
 	  1 - doctest_bitset (Not Run)
